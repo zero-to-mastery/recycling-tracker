@@ -1,2 +1,3 @@
 -[@aalokgupta](https://github.com/aalokgupta)
 -[@merunur](https://github.com/merunur)
+-[@waqar3](https://github.com/waqar3)
