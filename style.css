@@ -1,0 +1,17 @@
+*{
+	margin:0px;
+}
+h1{
+	text-align: center;
+	background-color: rgb(0, 230, 15);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'Indie Flower', cursive;
+	color:white;
+	font-size: 5rem;
+}
+h2{
+	text-align: center;
+	margin-top: 30px;
+	font-family: 'Raleway', sans-serif;
+}
