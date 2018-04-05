@@ -1,5 +1,5 @@
 import React from 'react';
-import Score from './Score.js'
+import Score from '../Score/Score'
 
 const ResultBox= ({waste, weight}) => {
 

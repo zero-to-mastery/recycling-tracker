@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from './Card.js';
+import Card from '../components/Cards/Card';
 import ResultBox from './ResultBox.js'
 
 
