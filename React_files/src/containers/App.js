@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from '../components/Cards/Card';
-import ResultBox from './ResultBox.js'
+import ResultBox from '../components/ResultBox/ResultBox'
 
 
 class App extends Component {
