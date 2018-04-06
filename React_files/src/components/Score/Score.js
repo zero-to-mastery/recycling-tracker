@@ -25,7 +25,7 @@ const Score = ({waste, weight}) => {
           		</div>
           		);
           }
-          else if((waste.length)+weight==0){
+          else if((waste.length)+weight===0){
                return(
                     <div>
                       <h1>Fill the form to know your status</h1>

@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from './Card.js';
-import ResultBox from './ResultBox.js'
-
+import Card from '../components/Cards/Card';
+import ResultBox from '../components/ResultBox/ResultBox'
+import Trash from '../components/Trash/Trash'
 
 class App extends Component {
-
-  constructor(){
-    super();
-    this.state={
-           waste: '',
-           weight: '',
-        };
-  }
+    state={
+            waste: '',
+            weight: '',
+            location:''
+          };
 
   onWasteChange= (event) => {
     this.setState({waste: event.target.value});
@@ -25,15 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className="App-header">
-          <section>
-             <span className="trash">
-               <span></span>
-                <i></i>
-             </span>
-          </section>
-          <h1 className="f1 App-title">Welcome to Recycling Tracker</h1>
-        </header>
+         <Trash />
          <Card onWaste={this.onWasteChange} onWeight={this.onWeightChange} />
          <ResultBox waste={this.state.waste} weight={this.state.weight} />
       </div>
