@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Score = ({waste, weight}) => {
-          if((waste.length)+weight>=100){
+          if((waste.length)&&weight>=100){
           	return (
           		<div>
           		  <h1>Congrats</h1>
@@ -9,7 +9,7 @@ const Score = ({waste, weight}) => {
           		</div>
           		);
           }
-          else if((waste.length)+weight>=50 && (waste.length)+weight<100){
+          else if(((waste.length)&&weight>=50) && (waste.length)&&weight<100){
           	return(
           		<div>
           		  <h1>Congrats</h1>
@@ -17,7 +17,7 @@ const Score = ({waste, weight}) => {
           		</div>
           		);
           }
-          else if((waste.length)+weight<50 && (waste.length)+weight>0){
+          else if(((waste.length)&&weight<50) && (waste.length)&&weight>0){
           	return(
           		<div>
           		  <h1>Congrats</h1>
@@ -25,7 +25,7 @@ const Score = ({waste, weight}) => {
           		</div>
           		);
           }
-          else if((waste.length)+weight===0){
+          else if((waste.length)===0){
                return(
                     <div>
                       <h1>Fill the form to know your status</h1>
