@@ -13,3 +13,5 @@
 -[@quantum35](https://github.com/quantum35)
 
 -[@stefananlam](https://github.com/stefananlam)
+
+-[@k_mihaly](https://github.com/k_mihaly)
