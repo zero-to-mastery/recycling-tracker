@@ -15,3 +15,5 @@
 -[@stefananlam](https://github.com/stefananlam)
 
 -[@k_mihaly](https://github.com/k_mihaly)
+
+-[@livingdev](https://github.com/livingdev)
