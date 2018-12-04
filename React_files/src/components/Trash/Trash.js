@@ -1,5 +1,5 @@
 import React from 'react';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from 'react-aux';
 import '../../containers/App.css'
 const Trash =(props) =>{
     return (
