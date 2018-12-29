@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+}
+
+.recycle_symbol {
+    height: 90px;
+    width: 90px;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 770px) {
+    .title {
+        font-size: 90%;
+    }
+    .recycle_symbol {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .title {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .title {
+        font-size: 50%;
+    }
+    p {
+        font-weight: bold;
+    }
+    .recycle_symbol {
+        height: 55px;
+        width: 55px;
+    }
+}
+
+.title {
+    display: inline-block;
+    margin: 0.2% 0%;
+    width: 25%;
+}
+
+h1 {
+    font-family: Roboto;
+    font-size: 281%;
+    margin: 0% 2%;
+    
+}
+
+p {
+    font-family: Montserrat;
+    font-size: 100%;
+    margin-top: 0;
+}
