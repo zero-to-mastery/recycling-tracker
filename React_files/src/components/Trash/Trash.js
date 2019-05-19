@@ -3,17 +3,12 @@ import Aux from 'react-aux';
 import '../../containers/App.css'
 const Trash =(props) =>{
     return (
-        <Aux>
-            <header className="App-header">
-            <section>
-                <span className="trash">
-                <span></span>
-                    <i></i>
-                </span>
-            </section>
-            <h1 className="f1 App-title">Welcome to Recycling Tracker.Lets Make The World Green</h1>
-            </header>
-        </Aux>
+      <header className="App-header">
+        <div>
+          <h1 className="app-title"><i class="fas fa-trash-alt trash-icon"></i>Recycling Tracker<i class="fas fa-recycle"></i></h1>
+        </div>
+
+      </header>
     );
 }
 export default Trash;

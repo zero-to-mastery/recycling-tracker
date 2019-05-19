@@ -28,18 +28,10 @@ const Score = ({waste, weight}) => {
           else if((waste.length)===0){
                return(
                     <div>
-                      <h1>Fill the form to know your status</h1>
+                      <h1>Fill in the form!</h1>
                     </div>
                     );
           }
-          else{
-               return(
-                    <div>
-                      <h1>ERROR: Fill the correct information</h1>
-                    </div>
-                    );
-          }
-
 	}
 
 export default Score;

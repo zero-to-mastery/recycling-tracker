@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'antipasta';
+    src: url('./fonts/antipastopro-demibold-webfont.woff2') format('woff2'),
+         url('./fonts/antipastopro-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
