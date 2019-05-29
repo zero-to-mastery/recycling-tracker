@@ -16,12 +16,18 @@
         height: 70px;
         width: 70px;
     }
+    .info {
+    font-size: 70%;
+}
 }
 
 @media only screen and (max-width: 730px) {
     .title {
         font-size: 70%;
     }
+    .info {
+    font-size: 60%;
+}
 }
 
 @media only screen and (max-width: 550px) {
@@ -35,6 +41,9 @@
         height: 55px;
         width: 55px;
     }
+    .info {
+        font-size: 40%;
+}
 }
 
 .title {
@@ -51,6 +60,7 @@ h1 {
 }
 
 p {
+    text-align: center;
     font-family: Montserrat;
     font-size: 100%;
     margin-top: 0;
