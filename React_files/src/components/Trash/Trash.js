@@ -5,7 +5,7 @@ const Trash =(props) =>{
     return (
       <header className="App-header">
         <div>
-          <h1 className="app-title"><i class="fas fa-trash-alt trash-icon"></i>Recycling Tracker<i class="fas fa-recycle"></i></h1>
+          <h1 className="app-title"><i className="fas fa-trash-alt trash-icon"></i>Recycling Tracker<i className="fas fa-recycle"></i></h1>
         </div>
 
       </header>

@@ -6,8 +6,8 @@ import Trash from '../components/Trash/Trash'
 
 class App extends Component {
     state={
-            waste: '',
-            weight: '',
+            waste: null,
+            weight: null,
             location:''
           };
 
