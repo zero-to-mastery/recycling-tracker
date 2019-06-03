@@ -28,9 +28,7 @@ const Score = ({waste, weight}) => {
                }
           } else {
                return (
-                    <div>
-                      <h1>Fill out the form above</h1>
-                    </div>
+                      <h1 class="initial-heading">Fill out the form above</h1>
                     );
           }
 	}
