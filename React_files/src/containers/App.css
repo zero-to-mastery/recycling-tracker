@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #5fcf80;
   height: 80px;
@@ -50,6 +45,22 @@ section {
   left:10%;
 }
 
+.fas {
+  padding: 0 1em;
+  color: #8cf0aa;
+}
+
+.trash-dump-card h1, .results-card h1 {
+  color: #555;
+}
+
+.trash-dump-card ::placeholder {
+  color: #999;
+}
+
+.results-card .initial-heading {
+  font-weight: 100;
+}
 
 .trash {
   background: #384047;
