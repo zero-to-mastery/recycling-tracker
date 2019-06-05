@@ -5,25 +5,30 @@ import ResultBox from '../components/ResultBox/ResultBox';
 import Trash from '../components/Trash/Trash';
 
 class App extends Component {
-  state = {
-    waste: null,
-    weight: null,
-    location: ''
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tempWaste: '',
+      tempWeight: '',
+      waste: '',
+      weight: '',
+      location: '',
+      renderResults: false
+    };
+  }
 
   onWasteChange = event => {
-    if (event.target.value === '') {
-      this.setState({ waste: null });
-    } else {
-      this.setState({ waste: event.target.value });
-    }
+    this.setState({ waste: event.target.value, renderResults: false });
   };
 
   onWeightChange = event => {
-    if (event.target.value === '') {
-      this.setState({ weight: null });
-    } else {
-      this.setState({ weight: event.target.value });
+    this.setState({ weight: event.target.value, renderResults: false });
+  };
+
+  handleClick = () => {
+    if (this.state.waste && this.state.weight) {
+      this.setState({ renderResults: true });
     }
   };
 
@@ -31,8 +36,18 @@ class App extends Component {
     return (
       <div className="App">
         <Trash />
-        <Card onWaste={this.onWasteChange} onWeight={this.onWeightChange} />
-        <ResultBox waste={this.state.waste} weight={this.state.weight} />
+        <Card
+          onWaste={this.onWasteChange}
+          onWeight={this.onWeightChange}
+          waste={this.state.waste}
+          weight={this.state.weight}
+          // Bring submit button onclick event to parent
+          handleClick={this.handleClick.bind(this)}
+        />
+        {/* CONDITIONALLY RENDER RESULTS */}
+        {this.state.renderResults ? (
+          <ResultBox waste={this.state.waste} weight={this.state.weight} />
+        ) : null}
       </div>
     );
   }
