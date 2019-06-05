@@ -9,8 +9,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      tempWaste: '',
-      tempWeight: '',
       waste: '',
       weight: '',
       location: '',
