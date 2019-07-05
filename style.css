@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(to right, #ADbef6, #f74782);
+}
+
 .container {
     text-align: center;
 }
