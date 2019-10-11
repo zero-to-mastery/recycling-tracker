@@ -12,12 +12,14 @@ class App extends Component {
 			waste: "",
 			weight: "",
 			location: "",
-			renderResults: false
+			renderResults: false,
+			recycling: ['plastic', 'pet', 'hdpe', 'ldpe', 'pp', 'metal', 'tin', 'aluminium', 'steel', 'cardboard', 'paper', 'glass'],
 		};
 	}
 
 	onWasteChange = event => {
-		this.setState({ waste: event.target.value, renderResults: false });
+		let waste = event.target.value.toLowerCase();
+		this.setState({ waste: waste, renderResults: false });
 	};
 
 	onWeightChange = event => {
@@ -44,7 +46,7 @@ class App extends Component {
 				/>
 				{/* CONDITIONALLY RENDER RESULTS */}
 				{this.state.renderResults ? (
-					<ResultBox waste={this.state.waste} weight={this.state.weight} />
+					<ResultBox waste={this.state.waste} weight={this.state.weight} recycling={this.state.recycling} />
 				) : null}
 			</div>
 		);

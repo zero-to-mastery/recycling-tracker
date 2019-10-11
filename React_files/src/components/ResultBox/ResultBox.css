@@ -1,0 +1,17 @@
+.result_level1 {
+    font-size: 250%;
+}
+
+.result_level2 {
+    font-size: 180%;
+}
+
+.result_level1, .result_level2 {
+    color: #555;
+
+}
+
+a {
+    color: #5fcf80;
+    text-decoration: none;
+}
