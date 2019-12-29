@@ -1,39 +1,38 @@
 import React, { Component } from "react";
 import "./Card.css";
 
-class Card extends Component {
-	render() {
+const Card = ({onWasteTypeChange,onWasteWeightChange,handleClick,waste}) => {	
 		return (
 			<div className="tc pa2 ma1 bw2 shadow-5 trash-dump-card">
 				<input
 					className="pa2 w-20 waste-name"
-					value={this.props.waste}
+					value={waste.type}
 					type="text"
 					placeholder="Name of the Waste"
-					onChange={this.props.onWaste}
+					onChange={onWasteTypeChange}
 				/>
 				<input
 					className="pa2 w-20 weight-in-kg"
-					value={this.props.weight}
+					value={waste.weight}
 					type="number"
 					placeholder="Weight number in kg"
-					onChange={this.props.onWeight}
+					onChange={onWasteWeightChange}
 				/>
 
 				<button
 					className={
-						this.props.waste && this.props.weight
+						waste.type && waste.weight
 							? "submit-button"
 							: "submit-button-deactivated"
 					}
 					// Send onClick event to parent
-					onClick={this.props.handleClick}
+					onClick={handleClick}
 				>
 					Submit
 				</button>
 			</div>
 		);
 	}
-}
+
 
 export default Card;

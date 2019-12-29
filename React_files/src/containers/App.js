@@ -1,56 +1,61 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import "./App.css";
 import Card from "../components/Cards/Card";
 import ResultBox from "../components/ResultBox/ResultBox";
 import Trash from "../components/Trash/Trash";
 
-class App extends Component {
-	constructor(props) {
-		super(props);
+const App = () =>  {
+	const [waste,setWaste] = useState({
+		type:"",
+		weight: 0,
+		location: ""
+	});
+	const [isRender,setRender] = useState(false);
+	const recycling =['plastic', 'pet', 'hdpe', 'ldpe', 'pp', 'metal', 'tin', 'aluminium', 'steel', 'cardboard', 'paper', 'glass']
 
-		this.state = {
-			waste: "",
-			weight: "",
-			location: "",
-			renderResults: false,
-			recycling: ['plastic', 'pet', 'hdpe', 'ldpe', 'pp', 'metal', 'tin', 'aluminium', 'steel', 'cardboard', 'paper', 'glass'],
-		};
-	}
 
-	onWasteChange = event => {
-		let waste = event.target.value.toLowerCase();
-		this.setState({ waste: waste, renderResults: false });
+	const onWasteTypeChange = event => {
+		let wasteType = event.target.value.toLowerCase();
+		setWaste({
+			...waste,
+			type:wasteType
+		});
+		
 	};
 
-	onWeightChange = event => {
-		this.setState({ weight: event.target.value, renderResults: false });
+	const onWasteWeightChange = event => {
+		setWaste({
+			...waste,
+			weight:event.target.value
+		});
+		
+		setRender(false);		
 	};
 
-	handleClick = () => {
-		if (this.state.waste && this.state.weight) {
-			this.setState({ renderResults: true });
+	const handleClick = () => {
+		if (waste.type && waste.weight) {
+			setRender(!isRender)
 		}
 	};
 
-	render() {
+	
 		return (
 			<div className="App">
 				<Trash />
 				<Card
-					onWaste={this.onWasteChange}
-					onWeight={this.onWeightChange}
-					waste={this.state.waste}
-					weight={this.state.weight}
+					onWasteTypeChange={onWasteTypeChange}
+					onWasteWeightChange={onWasteWeightChange}
+					waste={waste}					
 					// Bring submit button onclick event to parent
-					handleClick={this.handleClick.bind(this)}
+					handleClick={handleClick}
 				/>
 				{/* CONDITIONALLY RENDER RESULTS */}
-				{this.state.renderResults ? (
-					<ResultBox waste={this.state.waste} weight={this.state.weight} recycling={this.state.recycling} />
+				{isRender ? (
+					<ResultBox type={waste.type} weight={waste.weight} recycling={recycling} />
 				) : null}
 			</div>
 		);
-	}
+	
 }
 
 export default App;
