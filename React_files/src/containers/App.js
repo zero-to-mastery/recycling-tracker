@@ -50,9 +50,9 @@ const App = () =>  {
 					handleClick={handleClick}
 				/>
 				{/* CONDITIONALLY RENDER RESULTS */}
-				{isRender ? (
+				{isRender && (
 					<ResultBox type={waste.type} weight={waste.weight} recycling={recycling} />
-				) : null}
+				)}
 			</div>
 		);
 	
