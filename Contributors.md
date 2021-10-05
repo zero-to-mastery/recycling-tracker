@@ -63,3 +63,5 @@
 -[@jameslegoff92](https://github.com/jameslegoff92)
 
 -[@Wolfslicht](https://github.com/Wolfslicht)
+
+-[@chrish8510](https://github.com/chrish8510)
