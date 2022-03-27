@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #ADbef6, #f74782);
+    background: linear-gradient(to right, #26d1ec, #26ec95);
 }
 
 .container {
@@ -42,8 +42,8 @@ body {
         font-weight: bold;
     }
     .recycle_symbol {
-        height: 55px;
-        width: 55px;
+        height: 75px;
+        width: 75px;
     }
     .info {
         font-size: 40%;
@@ -58,13 +58,13 @@ body {
 
 h1 {
     font-family: Roboto;
-    font-size: 281%;
-    margin: 0% 2%;
+    font-size: 300%;
+    margin: 0% 5%;
 }
 
 p {
     text-align: center;
     font-family: Montserrat;
-    font-size: 100%;
+    font-size: 130%;
     margin-top: 0;
 }
